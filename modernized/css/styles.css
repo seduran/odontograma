@@ -1,0 +1,102 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+.odontograma-container {
+    position: relative;
+    width: 648px;
+    height: 800px;
+    user-select: none;
+}
+
+.odontograma-canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 648px;
+    height: 800px;
+    z-index: 1;
+}
+
+.button-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 648px;
+    height: 800px;
+    z-index: 2;
+    pointer-events: none; /* Click events pass through empty spaces to the canvas */
+}
+
+/* Individual buttons matching MenuItem styling */
+.odo-btn {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #35353f;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    color: #35353f;
+    pointer-events: auto; /* Enable click events on the button itself */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    
+    /* Exact pixel representation of renderStateNormal */
+    background: linear-gradient(
+        to bottom,
+        #f9f9f9 0px,
+        #f9f9f9 1px,
+        #f9fbfc 1px,
+        #f9fbfc 4px,
+        #ebf3f5 4px,
+        #ebf3f5 16px,
+        #e5eef1 16px,
+        #e5eef1 19px,
+        #e9eef0 19px,
+        #e9eef0 20px
+    );
+}
+
+/* Hover/Focus states (renderStateFocus, matching globalAlpha 0.5 overlay of #b2dee7 on top of current state) */
+.odo-btn:hover {
+    background: #b2dee7;
+}
+
+/* Active states (renderStateActive) */
+.odo-btn.active {
+    background: linear-gradient(
+        to bottom,
+        #dafff1 0px,
+        #dafff1 1px,
+        #bef7e1 1px,
+        #bef7e1 4px,
+        #ace8d1 4px,
+        #ace8d1 16px,
+        #8fd6bb 16px,
+        #8fd6bb 19px,
+        #6db096 19px,
+        #6db096 20px
+    );
+}
+
+.odo-btn.active:hover {
+    background: #b2dee7;
+}
+
+/* Diagnosis buttons default width */
+.diagnosis-btn {
+    width: 100px;
+}
+
+/* Control buttons default width */
+.control-btn {
+    width: 75px;
+}
