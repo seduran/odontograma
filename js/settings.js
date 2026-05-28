@@ -13,23 +13,21 @@
  * Settings class for the application.
  * This class contains all the values, which are not 
  * fixed in the engine.
- * @returns {Settings}
  */
-function Settings() {
-    "use strict";
-    // app settings
-    this.DEBUG = false;
-    this.HIHGLIGHT_SPACES = false;
-    this.TOOTH_PADDING = 0;
-    this.RECT_DIMEN = 10;
-    
-    // colors
-    this.COLOR_ON_TOUCH = "#FF8B00";
-    this.COLOR_HIGHLIGHT = "#1CDE02";
-    this.COLOR_RED = "#ff0000";
-    this.COLOR_BLUE = "#0052ff";
-    this.COLOR_BLACK = "#000000";
-    this.COLOR_HIGHLIGHT = "#00AEFF";
-    this.COLOR_HIGHLIGHT_BAD = "#FF0000";
-
+export default class Settings {
+    constructor() {
+        // app settings
+        this.DEBUG = false;
+        this.HIHGLIGHT_SPACES = false;
+        this.TOOTH_PADDING = 0;
+        this.RECT_DIMEN = 10;
+        
+        // colors
+        this.COLOR_ON_TOUCH = "#FF8B00";
+        this.COLOR_HIGHLIGHT = "#00AEFF"; // Overridden to #00AEFF in original code
+        this.COLOR_RED = "#ff0000";
+        this.COLOR_BLUE = "#0052ff";
+        this.COLOR_BLACK = "#000000";
+        this.COLOR_HIGHLIGHT_BAD = "#FF0000";
+    }
 }
