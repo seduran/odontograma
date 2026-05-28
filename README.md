@@ -7,7 +7,6 @@
 A virtual Odontogram in JavaScript.
 
 ![demo](docs/demo.gif)
-# Odontograma Modernized (v1.1.0)
 
 A virtual dental chart (Odontogram) application built with pure HTML5 Canvas, modern ES6+ JavaScript, and native HTML overlay elements. This directory contains a fully modernized, refactored, and optimized version of the original Odontograma project.
 
