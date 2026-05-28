@@ -21,26 +21,6 @@ export default class Renderer {
     }
 
     /**
-     * Method to render a splash screen
-     */
-    drawSplash() {
-        this.context.fillStyle = "#ffffff";
-        this.context.fillRect(0, 0, this.width, this.height);
-
-        this.context.beginPath();
-        this.context.textAlign = 'center';
-        this.context.fillStyle = "#000000";
-        this.context.font = "32px Arial Bold";
-        this.context.fillText("OdontoGraph", this.width / 2, this.height / 2 - 16);
-
-        this.context.font = "24px Arial Bold";
-        this.context.fillStyle = "#000000";
-
-        const year = new Date().getFullYear();
-        this.context.fillText("Bardur Thomsen - " + year, this.width / 2, this.height / 2 + 40);
-    }
-
-    /**
      * Method to initialize the renderer for drawing the odontograma
      * @param {HTMLCanvasElement} canvas the canvas to draw on
      */
