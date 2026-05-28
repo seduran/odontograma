@@ -899,9 +899,7 @@ export default class Engine {
     }
 
     start() {
-        setTimeout(() => {
-            this.update();
-        }, 1500);
+        this.update();
     }
 
     getToothById(id) {
