@@ -1147,7 +1147,9 @@ export default class Engine {
             printWin.close();
         }, true);
 
-        this.preview = false;
-        this.hidePrintPreview();
+        if (this.preview) {
+            this.preview = false;
+            this.hidePrintPreview();
+        }
     }
 }
